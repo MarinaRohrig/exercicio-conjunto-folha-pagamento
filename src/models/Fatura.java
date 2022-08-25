@@ -1,8 +1,15 @@
 package models;
 
-public class Fatura {
+public class Fatura implements ContasAPagar {
     private Fornecedor fornecedor;
     private double valorNotaFiscal;
+
+
+    @Override
+    public double calculaGastos(){
+
+        return this.valorNotaFiscal;
+    }
 
     public Fornecedor getFornecedor() {
         return fornecedor;
@@ -19,4 +26,6 @@ public class Fatura {
     public void setValorNotaFiscal(double valorNotaFiscal) {
         this.valorNotaFiscal = valorNotaFiscal;
     }
+
+
 }

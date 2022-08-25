@@ -1,6 +1,6 @@
 package models;
 
-public class FuncionarioComissionado extends Funcionario{
+public class FuncionarioComissionado extends Funcionario {
 
     private double percentual;
     private double valorVendas;
@@ -31,4 +31,11 @@ public class FuncionarioComissionado extends Funcionario{
         return super.getInfo() + "Comissão:" + this.percentual + ". Valor de vendas: R$ " + this.valorVendas +
                 "\n Salario: R$ " + this.calculaSalario() + ".";
     }
+
+
+    @Override
+    public double calculaGastos() {
+        return this.calculaSalario();
+    }
+
 }

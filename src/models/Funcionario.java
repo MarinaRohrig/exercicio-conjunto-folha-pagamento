@@ -1,6 +1,6 @@
 package models;
 
-public abstract class Funcionario {
+public abstract class Funcionario implements ContasAPagar {
     private String nome;
     private String cpf;
 
@@ -9,7 +9,6 @@ public abstract class Funcionario {
     }
 
     public abstract double calculaSalario();
-
 
 
     public String getNome() {

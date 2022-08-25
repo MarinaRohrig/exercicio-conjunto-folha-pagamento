@@ -20,4 +20,9 @@ public class FuncionarioMensalista extends  Funcionario{
     public String getInfo(){
         return super.getInfo() + "Salario: R$" + getSalario();
     }
+    @Override
+    public double calculaGastos() {
+        return this.calculaSalario();
+    }
+
 }

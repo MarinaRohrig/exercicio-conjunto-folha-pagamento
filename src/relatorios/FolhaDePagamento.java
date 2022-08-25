@@ -1,11 +1,23 @@
 package relatorios;
 
-import models.Funcionario;
+import models.*;
 
 import java.util.List;
 
 public class FolhaDePagamento {
     private double total;
+
+    public void calculaTotalSalario(List<Funcionario> listaDeFuncionarios) {
+        for (Funcionario funcionario : listaDeFuncionarios){
+            this.total += funcionario.calculaSalario();
+        }
+    }
+
+    public void calculaTotalGastos(List<ContasAPagar> lista) {
+        for (ContasAPagar divida : lista) {
+            this.total += divida.calculaGastos();
+        }
+    }
 
     public double getTotal() {
         return total;
@@ -15,10 +27,4 @@ public class FolhaDePagamento {
         this.total = total;
     }
 
-    public void calculaTotal(List<Funcionario> listaDeFuncionarios){
-        //for each funcionario dentro de lista de funcionarios, incrementa o total
-        for (Funcionario func : listaDeFuncionarios) {
-            this.total += func.calculaSalario();
-        }
-    }
 }

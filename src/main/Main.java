@@ -35,7 +35,7 @@ public class Main {
         funcionarioList.add(func2);
         funcionarioList.add(func3);
 
-        folha.calculaTotal(funcionarioList);
+        folha.calculaTotalSalario(funcionarioList);
         System.out.println(func1.getInfo() + "\n");
         System.out.println(func2.getInfo() + "\n");
         System.out.println(func3.getInfo() + "\n");

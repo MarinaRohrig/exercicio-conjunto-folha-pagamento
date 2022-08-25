@@ -1,6 +1,6 @@
 package models;
 
-public class FuncionarioHorista extends Funcionario{
+public class FuncionarioHorista extends Funcionario {
 
     private double custoHora;
     private double horasTrabalhadas;
@@ -31,4 +31,10 @@ public class FuncionarioHorista extends Funcionario{
         return super.getInfo() + "Custo/Hora: R$ " + this.custoHora + ". Horas trabalhadas: "+ this.horasTrabalhadas +
                 "\n Salario: R$" + this.calculaSalario() + ".";
     }
+
+    @Override
+    public double calculaGastos() {
+        return this.calculaSalario();
+    }
+
 }

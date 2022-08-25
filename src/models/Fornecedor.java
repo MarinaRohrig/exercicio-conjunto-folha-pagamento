@@ -3,7 +3,14 @@ package models;
 public class Fornecedor {
     private String nomeFantasia;
     private String cnpj;
-    private String  endereço;
+    private String  endereco;
+
+    public Fornecedor(String nomeFantasia, String cnpj, String endereco) {
+        this.nomeFantasia = nomeFantasia;
+        this.cnpj = cnpj;
+        this.endereco = endereco;
+    }
+
 
     public String getNomeFantasia() {
         return nomeFantasia;
@@ -22,10 +29,11 @@ public class Fornecedor {
     }
 
     public String getEndereço() {
-        return endereço;
+        return endereco;
     }
 
     public void setEndereço(String endereço) {
-        this.endereço = endereço;
+        this.endereco = endereço;
     }
+
 }
