@@ -29,6 +29,6 @@ public class FuncionarioComissionado extends Funcionario{
     @Override
     public String getInfo(){
         return super.getInfo() + "Comissão:" + this.percentual + ". Valor de vendas: R$ " + this.valorVendas +
-                "\nSalario: R$ " + this.calculaSalario() + ".";
+                "\n Salario: R$ " + this.calculaSalario() + ".";
     }
 }
